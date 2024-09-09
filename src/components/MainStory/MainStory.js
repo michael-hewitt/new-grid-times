@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { QUERIES } from '../../constants';
 
 const MainStory = ({
   id,
@@ -18,7 +19,7 @@ const MainStory = ({
       <Abstract>
         <Location>{location}</Location> — {abstract}
       </Abstract>
-      <ReadMore href="/story">Continue Reading…</ReadMore>
+      <ReadMore href="/story">Continue Reading</ReadMore>
     </Wrapper>
   );
 };
@@ -41,6 +42,16 @@ const Heading = styled.h2`
 `;
 
 const Abstract = styled.p`
+  /* the following 4 lines are needed to clamp at 8 lines */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  overflow: hidden;
+  
+  @media ${QUERIES.tabletOnly} {
+    -webkit-line-clamp: 16;
+  }
+  
   font-size: 1rem;
   margin-bottom: 1em;
   white-space: pre-wrap;
