@@ -42,6 +42,12 @@ const Heading = styled.h2`
 `;
 
 const Abstract = styled.p`
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  height: min-content;
+
   grid-area: abstract;
   font-size: 1rem;
   white-space: pre-wrap;
