@@ -22,13 +22,15 @@ const Wrapper = styled.article`
   gap: 4px 16px;
   grid-template-columns: 120px 1fr;
   color: var(--color-gray-900);
-  
+
+  // couldn't make the container query work right...
+  // @container (width < 300px) { 
   @media ${QUERIES.tabletOnly} {
     grid-template-areas:
       'image'
       'heading'
       'abstract';
-    grid-template-columns: revert;
+    grid-template-columns: 1fr;
   }
 `;
 
