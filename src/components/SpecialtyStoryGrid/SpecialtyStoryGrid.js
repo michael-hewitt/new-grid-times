@@ -50,6 +50,7 @@ const Wrapper = styled.div`
   grid-template-areas:
     'markets'
     'sports';
+  grid-template-columns: 100%;
   gap: 48px;
 
   @media ${QUERIES.laptopAndUp} {
