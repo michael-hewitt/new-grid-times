@@ -172,9 +172,8 @@ const MainNavArea = styled.div`
   padding: 32px 0 48px;
   text-align: center;
   @media ${QUERIES.tabletAndUp} {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     text-align: left;
   }
 `;
